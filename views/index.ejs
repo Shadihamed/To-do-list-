@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TODO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Current List</h1>
+
+    <ul class="items">
+    <% for(let i=0; i < info.length; i++) {%>
+        <li class="item">
+            <span><%= info[i].toDoName %></span>
+            <span><%= info[i].completed %></span>
+            <span class='fa fa-check'></span>
+            <span class='fa fa-trash'></span>
+        </li>
+    <% } %>
+    </ul>
+    <h2>Add Items</h2>
+    <form  action="/addItems" method="post">
+<input type="text" name="items" value="items">
+    </form>
+
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
